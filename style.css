@@ -33,7 +33,7 @@ li {
 
 .cabecalho img {
     width: 120px;
-    border-radius: 33%;
+    border-radius: 30%;
     margin-bottom: 15px;
 }
 
@@ -57,8 +57,9 @@ li {
 }
 
 .link-image {
-    width: 30px;
-    margin-right: 10px;
+    position: absolute;
+    left: 15px;
+    width: 24px;
 }
 
 .link-text {
@@ -66,13 +67,15 @@ li {
     color: #fff;
 }
 
+
 .link {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #1e293b;
     width: 400px;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -109,7 +112,7 @@ li {
 
 @media (max-width: 500px) {
     .link {
-        width: 95%;
+        width: 200px;
     }
 
     .link-text {
@@ -125,13 +128,17 @@ li {
     }
 
     .footer-button {
-        font-size: 14px;
+        font-size: 12px;
         padding: 10px 16px;
     }
 
 }
 
 @media (max-width: 350px) {
+    .link{
+        width: 150px;
+    }
+
     .link-text {
         font-size: 14px;
     }
