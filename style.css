@@ -1,9 +1,31 @@
+:root {
+    --bg: #0f0f1a;
+    --text: #ffffff;
+    --subtext: #aaaaaa;
+    --card: #1e293b;
+    --hover: #3b82f6;
+    --brd: transparent;
+}
+
+body.light {
+    --bg: #f5f5f5;
+    --text: #111;
+    --subtext: #555;
+    --card: #ffffff;
+    --hover: #438ba8;
+    --brd: #2563eb;
+}
+
+* {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
 body {
     margin: 0;
     width: 100%;
     height: 100vh;
     font-family: "Poppins", sans-serif;
-    background: #0f0f1a;
+    background: var(--bg);
     scroll-behavior: smooth;
 }
 
@@ -31,6 +53,19 @@ li {
     margin-top: 50px;
 }
 
+#theme-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+#theme-button img {
+    width: 24px;
+}
+
 .cabecalho img {
     width: 120px;
     border-radius: 30%;
@@ -39,13 +74,13 @@ li {
 
 .cabecalho-titulo {
     font-size: 24px;
-    color: #fff;
+    color: var(--text);
     margin-bottom: 5px;
 }
 
 .cabecalho-link {
     font-size: 14px;
-    color: #aaa;
+    color: var(--subtext);
 }
 
 .conteiner {
@@ -64,7 +99,7 @@ li {
 
 .link-text {
     font-size: 18px;
-    color: #fff;
+    color: var(--text);
 }
 
 
@@ -73,16 +108,17 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1e293b;
+    background-color: var(--card);
     width: 400px;
     padding: 12px;
     margin-bottom: 15px;
     border-radius: 10px;
     transition: all 0.3s ease;
+    border: 1px solid var(--brd);
 }
 
 .link:hover {
-    background-color: #3b82f6;
+    background-color: var(--hover);
     transform: scale(1.03);
 }
 
@@ -92,20 +128,22 @@ li {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 0;
 }
 
 .footer-button {
     font-size: 14px;
-    color: #fff;
+    color: var(--text);
     padding: 12px 20px;
     border-radius: 8px;
-    background: #1e293b;
+    background: var(--card);
     transition: all 0.3s ease;
     display: inline-block;
+    border: 1px solid var(--brd);
 }
 
 .footer-button:hover {
-    background-color: #3b82f6;
+    background-color: var(--hover);
     transform: scale(1.05);
     opacity: 0.9;
 }
